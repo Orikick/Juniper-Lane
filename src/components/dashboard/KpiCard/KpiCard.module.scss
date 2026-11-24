@@ -1,0 +1,100 @@
+@use '../../../styles/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+
+  @include md {
+    padding: 20px;
+  }
+}
+
+// Revenue leads the row: it sits on the brand colour so the headline number is found first.
+.featured {
+  --text: var(--sidebar-text);
+  --text-2: var(--sidebar-text-muted);
+  --success: #8be3b1;
+  --danger: #ffb3bf;
+  --success-soft: rgb(139 227 177 / 0.14);
+  --danger-soft: rgb(255 179 191 / 0.14);
+  --neutral-soft: rgb(255 255 255 / 0.1);
+
+  border-color: var(--sidebar-bg);
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+
+  // The dark sidebar is close to the dark page, so the card takes a deeper teal there.
+  :global([data-theme='dark']) & {
+    border-color: #22504a;
+    background: #163631;
+  }
+}
+
+.label {
+  color: var(--text-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  overflow-wrap: anywhere;
+
+  @include md {
+    font-size: 2rem;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-top: 6px;
+  font-size: 0.8125rem;
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 1px 8px 1px 6px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.up {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.down {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.flat {
+  background: var(--neutral-soft);
+  color: var(--text-2);
+}
+
+.comparison {
+  color: var(--text-2);
+}
+
+.skeletonValue {
+  margin: 6px 0;
+}

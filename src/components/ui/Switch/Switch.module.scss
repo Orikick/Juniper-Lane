@@ -1,0 +1,58 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.description {
+  color: var(--text-2);
+  font-size: 0.8125rem;
+}
+
+.switch {
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--control-border);
+  transition: background-color 140ms ease;
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--surface);
+  transition: transform 140ms ease;
+}
+
+.on {
+  background: var(--primary);
+
+  .thumb {
+    transform: translateX(18px);
+  }
+}

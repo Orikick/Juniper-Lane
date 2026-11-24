@@ -1,0 +1,28 @@
+@use '../../../styles/mixins' as *;
+
+.footer {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 12px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: 0.8125rem;
+
+  @include sm {
+    padding-inline: 16px;
+  }
+
+  @include md {
+    padding-inline: 24px;
+  }
+
+  @include xl {
+    padding-inline: 40px;
+  }
+}
+
+.name {
+  color: var(--text);
+  font-weight: 600;
+}

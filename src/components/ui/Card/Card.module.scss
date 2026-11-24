@@ -1,0 +1,16 @@
+@use '../../../styles/mixins' as *;
+
+.card {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+}
+
+.padded {
+  padding: 16px;
+
+  @include md {
+    padding: 20px 24px;
+  }
+}

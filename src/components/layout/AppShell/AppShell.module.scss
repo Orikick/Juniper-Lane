@@ -1,0 +1,60 @@
+@use '../../../styles/mixins' as *;
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 100vh;
+
+  @include md {
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    transition: grid-template-columns 160ms ease;
+  }
+}
+
+.collapsed {
+  @include md {
+    grid-template-columns: var(--sidebar-width-collapsed) minmax(0, 1fr);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 12px 32px;
+
+  @include sm {
+    padding: 20px 16px 32px;
+  }
+
+  @include md {
+    padding: 28px 24px 40px;
+  }
+
+  @include xl {
+    padding: 32px 40px 48px;
+  }
+
+  // Focus is moved here on navigation. It is not a control, so it needs no ring.
+  &:focus {
+    outline: none;
+  }
+}
+
+.fallback {
+  display: grid;
+  place-items: center;
+  min-height: 40vh;
+  color: var(--text-3);
+}
+
+.drawerNav {
+  padding: 12px;
+}

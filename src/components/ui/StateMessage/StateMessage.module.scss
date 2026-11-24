@@ -1,0 +1,44 @@
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 220px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.compact {
+  min-height: 0;
+  padding: 24px 16px;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 6px;
+  border-radius: 50%;
+  background: var(--neutral-soft);
+  color: var(--text-2);
+}
+
+.error .icon {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.description {
+  max-width: 44ch;
+  margin-bottom: 10px;
+  color: var(--text-2);
+  font-size: 0.875rem;
+}

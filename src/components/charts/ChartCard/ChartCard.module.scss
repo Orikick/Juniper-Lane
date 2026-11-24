@@ -1,0 +1,65 @@
+@use '../../../styles/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.heading {
+  min-width: 0;
+}
+
+.title {
+  font-size: 1.0625rem;
+}
+
+.description {
+  margin-top: 2px;
+  color: var(--text-2);
+  font-size: 0.8125rem;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  color: var(--text-2);
+  font-size: 0.8125rem;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendKey {
+  width: 18px;
+  height: 0;
+  border-top: 2px solid var(--key-color);
+}
+
+.dashed {
+  border-top-style: dashed;
+}
+
+.body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.loading {
+  width: 100%;
+}

@@ -1,0 +1,93 @@
+.drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(100vw, 440px);
+  max-width: none;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  overflow: hidden;
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+    animation: slideFromRight 200ms ease-out;
+  }
+
+  &::backdrop {
+    background: rgb(8 14 13 / 0.55);
+  }
+}
+
+.left {
+  inset: 0 auto 0 0;
+  width: min(86vw, 300px);
+  border-left: 0;
+  border-right: 1px solid var(--border);
+
+  &[open] {
+    animation-name: slideFromLeft;
+  }
+}
+
+// The navigation drawer reuses the sidebar colours by remapping the tokens its children read.
+.nav {
+  --text: var(--sidebar-text);
+  --text-2: var(--sidebar-text-muted);
+  --neutral-soft: var(--sidebar-hover);
+  --border: var(--sidebar-border);
+  --focus: var(--sidebar-focus);
+
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 12px 12px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 1.125rem;
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

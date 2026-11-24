@@ -1,0 +1,61 @@
+@use '../../../styles/mixins' as *;
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 2px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+
+  &:hover {
+    background: var(--neutral-soft);
+  }
+
+  @include lg {
+    padding: 2px 10px 2px 2px;
+  }
+}
+
+.identity {
+  display: none;
+
+  @include lg {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+}
+
+.name {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.role {
+  color: var(--text-2);
+  font-size: 0.75rem;
+}
+
+.chevron {
+  display: none;
+  color: var(--text-2);
+
+  @include lg {
+    display: block;
+  }
+}
+
+.menuName {
+  font-weight: 600;
+}
+
+.menuEmail {
+  color: var(--text-2);
+  font-size: 0.8125rem;
+  overflow-wrap: anywhere;
+}

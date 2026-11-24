@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.passwordWrap {
+  position: relative;
+
+  input {
+    padding-right: 48px;
+  }
+}
+
+.reveal {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--text-2);
+  transform: translateY(-50%);
+
+  &:hover {
+    background: var(--neutral-soft);
+    color: var(--text);
+  }
+}
+
+.error {
+  color: var(--danger);
+  font-weight: 500;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,41 @@
+@use '../../../styles/mixins' as *;
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--topbar-height);
+  padding: 0 12px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+
+  @include md {
+    gap: 16px;
+    padding: 0 24px;
+  }
+
+  @include xl {
+    padding: 0 40px;
+  }
+}
+
+// Scoped under .bar so it always wins over IconButton's own display rule.
+.bar .menuButton {
+  @include md {
+    display: none;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+
+  @include md {
+    gap: 12px;
+  }
+}

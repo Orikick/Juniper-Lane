@@ -1,0 +1,44 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.select {
+  width: 100%;
+  padding: 0 34px 0 12px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--text);
+  appearance: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--text-2);
+  }
+
+  &[aria-invalid='true'] {
+    border-color: var(--danger);
+    box-shadow: inset 0 0 0 1px var(--danger);
+  }
+}
+
+.md {
+  min-height: 40px;
+}
+
+.sm {
+  min-height: 32px;
+  font-size: 0.8125rem;
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: var(--text-2);
+  pointer-events: none;
+}

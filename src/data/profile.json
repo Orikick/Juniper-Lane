@@ -1,0 +1,13 @@
+{
+  "name": "Maya Okafor",
+  "email": "maya@juniperlane.example",
+  "jobTitle": "Operations lead",
+  "phone": "+44 1632 960 014",
+  "timezone": "Europe/London",
+  "bio": "I look after fulfilment and customer care for the Juniper Lane online shop.",
+  "notifications": {
+    "weeklySummary": true,
+    "newOrders": false,
+    "lowStock": true
+  }
+}

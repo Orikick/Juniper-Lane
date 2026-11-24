@@ -1,0 +1,102 @@
+@use '../../styles/mixins' as *;
+
+.page {
+  display: grid;
+  min-height: 100vh;
+
+  @include lg {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 20px;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+
+  @include lg {
+    justify-content: space-between;
+    padding: 48px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+// The one large piece of type in the product: the brand panel's statement.
+.statement {
+  display: none;
+  max-width: 16ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 3.6vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+
+  @include lg {
+    display: block;
+  }
+}
+
+.footnote {
+  display: none;
+  max-width: 40ch;
+  color: var(--sidebar-text-muted);
+
+  @include lg {
+    display: block;
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 16px 40px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.toggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.panel {
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 1.75rem;
+}
+
+.demo {
+  margin: 8px 0 28px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--focus);
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: 0.875rem;
+}

@@ -1,0 +1,60 @@
+@use '../../../styles/mixins' as *;
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: 0.8125rem;
+
+  @include md {
+    padding: 10px 20px;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.size {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page {
+  font-variant-numeric: tabular-nums;
+}
+
+.buttons {
+  display: flex;
+  gap: 2px;
+
+  button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+.buttons .edge {
+  display: none;
+
+  @include sm {
+    display: inline-flex;
+  }
+}
+
+.summary {
+  font-variant-numeric: tabular-nums;
+}

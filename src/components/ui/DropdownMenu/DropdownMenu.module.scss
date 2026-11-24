@@ -1,0 +1,48 @@
+.wrap {
+  position: relative;
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 40;
+  min-width: 220px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--surface);
+  box-shadow: var(--shadow-pop);
+}
+
+.header {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--neutral-soft);
+  }
+
+  svg {
+    color: var(--text-2);
+  }
+}

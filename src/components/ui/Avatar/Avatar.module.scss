@@ -1,0 +1,48 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.sm {
+  width: 28px;
+  height: 28px;
+  font-size: 0.6875rem;
+}
+
+.md {
+  width: 36px;
+  height: 36px;
+  font-size: 0.8125rem;
+}
+
+.lg {
+  width: 56px;
+  height: 56px;
+  font-size: 1.125rem;
+}
+
+.teal {
+  background: var(--primary-soft);
+  color: var(--primary-text);
+}
+
+.violet {
+  background: var(--neutral-soft);
+  color: var(--focus);
+}
+
+.amber {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.blue {
+  background: var(--info-soft);
+  color: var(--info);
+}

@@ -1,0 +1,117 @@
+// Design tokens. Components only read these custom properties,
+// so the dark theme is a single block of overrides.
+:root {
+  color-scheme: light;
+
+  --font-body: 'Public Sans Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Bricolage Grotesque Variable', 'Public Sans Variable', system-ui, sans-serif;
+
+  --bg: #f3f5f4;
+  --surface: #ffffff;
+  --surface-2: #f6f8f7;
+  --border: #dce3e0;
+  --control-border: #7c8b86;
+  --text: #14201d;
+  --text-2: #43534e;
+  --text-3: #5c6b66;
+
+  --primary: #0f6b62;
+  --primary-hover: #0b564f;
+  --primary-contrast: #ffffff;
+  --primary-soft: #e0f0ed;
+  --primary-text: #0f6b62;
+  --focus: #5a48d0;
+
+  --success: #1a6e44;
+  --success-soft: #e3f4ea;
+  --warning: #8a5a00;
+  --warning-soft: #fcf0d4;
+  --danger: #b4233a;
+  --danger-soft: #fbe6e9;
+  --info: #2059b0;
+  --info-soft: #e3edfb;
+  --neutral: #43534e;
+  --neutral-soft: #e9eeec;
+
+  --sidebar-bg: #12302c;
+  --sidebar-text: #eef5f3;
+  --sidebar-text-muted: #b1c6c0;
+  --sidebar-hover: #1a3f3a;
+  --sidebar-active: #214d47;
+  --sidebar-accent: #b8b2ff;
+  --sidebar-border: #24453f;
+  --sidebar-focus: #d4cfff;
+
+  // Chart colours were checked for colour-blind separation on this surface.
+  --chart-1: #0b8f82;
+  --chart-2: #6250d6;
+  --chart-3: #d98a00;
+  --chart-4: #d6537e;
+  --chart-5: #2a78d6;
+  --chart-grid: #e6ebe9;
+  --chart-cursor: rgb(20 32 29 / 0.06);
+
+  --skeleton: #e4e9e7;
+  --skeleton-shine: #f1f4f3;
+  --shadow-pop: 0 12px 32px rgb(20 32 29 / 0.16);
+
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+
+  --sidebar-width: 248px;
+  --sidebar-width-collapsed: 72px;
+  --topbar-height: 64px;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0e1514;
+  --surface: #16211f;
+  --surface-2: #1b2826;
+  --border: #2a3936;
+  --control-border: #6b7f7a;
+  --text: #e8efec;
+  --text-2: #b9c7c2;
+  --text-3: #95a6a0;
+
+  --primary: #3db3a6;
+  --primary-hover: #57c4b8;
+  --primary-contrast: #06211e;
+  --primary-soft: #17332f;
+  --primary-text: #6fd0c4;
+  --focus: #a79ff5;
+
+  --success: #6fd39a;
+  --success-soft: #143324;
+  --warning: #f0c060;
+  --warning-soft: #3a2e10;
+  --danger: #f28b9b;
+  --danger-soft: #3d1a20;
+  --info: #8db8f5;
+  --info-soft: #152a47;
+  --neutral: #b9c7c2;
+  --neutral-soft: #24312e;
+
+  --sidebar-bg: #121c1a;
+  --sidebar-text: #e8efec;
+  --sidebar-text-muted: #a3b5af;
+  --sidebar-hover: #1a2826;
+  --sidebar-active: #20312e;
+  --sidebar-accent: #a79ff5;
+  --sidebar-border: #26332f;
+  --sidebar-focus: #a79ff5;
+
+  --chart-1: #2fa396;
+  --chart-2: #8079e6;
+  --chart-3: #c98500;
+  --chart-4: #d55181;
+  --chart-5: #3987e5;
+  --chart-grid: #24312e;
+  --chart-cursor: rgb(232 239 236 / 0.07);
+
+  --skeleton: #212e2b;
+  --skeleton-shine: #2a3936;
+  --shadow-pop: 0 12px 32px rgb(0 0 0 / 0.5);
+}
